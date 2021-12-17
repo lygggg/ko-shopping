@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ko-shopping/static/js/main.3b2c99dc.js",
+    "main.js": "/ko-shopping/static/js/main.edd0d5e6.js",
     "index.html": "/ko-shopping/index.html",
-    "main.3b2c99dc.js.map": "/ko-shopping/static/js/main.3b2c99dc.js.map"
+    "main.edd0d5e6.js.map": "/ko-shopping/static/js/main.edd0d5e6.js.map"
   },
   "entrypoints": [
-    "static/js/main.3b2c99dc.js"
+    "static/js/main.edd0d5e6.js"
   ]
 }
