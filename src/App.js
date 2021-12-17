@@ -6,7 +6,7 @@ import ProductDetail from "./pages/ProductDetail";
 
 function Shopping() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ko-shopping">
       <div>
         <Link to="/">홈</Link>
         <Link to="/productDetail">상품</Link>
