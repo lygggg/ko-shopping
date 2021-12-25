@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Basket from "./pages/Basket";
-import ProductDetail from "./pages/ProductDetail";
+import Product from "./pages/Product";
 
 function Shopping() {
   return (
@@ -12,7 +12,7 @@ function Shopping() {
         <Link to="/productDetail">상품</Link>
         <Link to="/basket">장바구니</Link>
         <Route exact path="/" component={Home} />
-        <Route path="/productDetail" component={ProductDetail} />
+        <Route path="/product" component={Product} />
         <Route path="/basket" component={Basket} />
       </div>
     </BrowserRouter>
