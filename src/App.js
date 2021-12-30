@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Basket from "./pages/Basket";
 import Product from "./pages/Product";
 
-function Shopping() {
+function App() {
   return (
     <BrowserRouter basename="/ko-shopping">
       <div>
@@ -18,4 +18,4 @@ function Shopping() {
     </BrowserRouter>
   );
 }
-export default Shopping;
+export default App;
