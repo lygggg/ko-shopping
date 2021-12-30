@@ -2,9 +2,7 @@ import React from "react";
 import axios from "axios";
 
 const getHome = async () => {
-  const { data } = await axios.get(
-    "https://c2c71aa1-a8be-4a3b-bd59-4b1498e1fe06.mock.pstmn.io/home"
-  );
+  const { data } = await axios.get(`${process.env.REACT_APP_PSTM_API}/home`);
   console.log(data.themes);
 };
 
