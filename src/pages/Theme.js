@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import styled from "styled-components";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -15,7 +16,7 @@ const Theme = () => {
     <>
       <Swiper navigation={true} className="mySwiper">
         <SwiperSlide>
-          <Link to={`/themes/13/products`}>#겨울 방한템</Link>
+          <StyledLink to={`/themes/13/products`}>#겨울 방한템</StyledLink>
         </SwiperSlide>
         <SwiperSlide>#나를 위한 선물</SwiperSlide>
         <SwiperSlide>#너를 위한 선물</SwiperSlide>
@@ -23,5 +24,9 @@ const Theme = () => {
     </>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export default Theme;

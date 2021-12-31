@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import styled from "styled-components";
+
 import Theme from "./Theme";
 import ProductList from "./ProductList";
 
@@ -11,12 +13,21 @@ const getHome = async () => {
 
 const Home = () => {
   return (
-    <div>
+    <Div>
       <Theme />
       <button onClick={getHome}>클릭</button>
       <ProductList />
-    </div>
+    </Div>
   );
 };
+
+const Div = styled.div`
+  box-sizing: border-box;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  min-width: 1500px;
+  font-family: "woowa";
+`;
 
 export default Home;
