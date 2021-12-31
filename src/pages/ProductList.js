@@ -21,24 +21,28 @@ const ProductList = () => {
   }, []);
 
   return (
-    <ListDiv>
-      {productList.map((product) => (
-        <div key={product.id}>
-          <Product product={product}></Product>
-        </div>
-      ))}
-    </ListDiv>
+    <MainDiv>
+      <ListDiv>
+        {productList.map((product) => (
+          <div key={product.id}>
+            <Product product={product}></Product>
+          </div>
+        ))}
+      </ListDiv>
+    </MainDiv>
   );
 };
 
 const ListDiv = styled.div`
-width: 100%
-height: 100%;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-rows: 30% 30% 30%;
   justify-content: center;
-  grid-row-gap: 100px
+  grid-row-gap: 30px;
+  border: 1px solid #eaeaea;
+`;
+const MainDiv = styled.div`
+  height: 1500px;
 `;
 
 export default ProductList;

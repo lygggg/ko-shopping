@@ -20,7 +20,7 @@ const Img = styled.img`
 `;
 
 const DivName = styled.div`
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   text-align: left;
 `;
@@ -31,8 +31,7 @@ const DivDes = styled.div`
 
 const DivGrid = styled.div`
   margin: 20px;
-
-  margin-top: 20px;
+  margin-top: 40px;
 `;
 
 export default Product;
