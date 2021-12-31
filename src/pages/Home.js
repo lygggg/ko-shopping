@@ -15,7 +15,6 @@ const Home = () => {
   return (
     <Div>
       <Theme />
-      <button onClick={getHome}>클릭</button>
       <ProductList />
     </Div>
   );
