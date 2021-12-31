@@ -14,19 +14,37 @@ SwiperCore.use([Navigation]);
 const Theme = () => {
   return (
     <>
-      <Swiper navigation={true} className="mySwiper">
-        <SwiperSlide>
-          <StyledLink to={`/themes/13/products`}>#겨울 방한템</StyledLink>
-        </SwiperSlide>
-        <SwiperSlide>#나를 위한 선물</SwiperSlide>
-        <SwiperSlide>#너를 위한 선물</SwiperSlide>
-      </Swiper>
+      <ThemeDiv>
+        <Swiper navigation={true} className="mySwiper">
+          <SwiperSlide>
+            <img
+              src={
+                "https://cdn.pixabay.com/photo/2016/11/30/08/46/living-room-1872191_960_720.jpg"
+              }
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={
+                "https://cdn.pixabay.com/photo/2021/02/02/02/40/souvenirs-5972500_960_720.jpg"
+              }
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={
+                "https://cdn.pixabay.com/photo/2016/11/29/13/37/christmas-1869902_960_720.jpg"
+              }
+            />
+          </SwiperSlide>
+        </Swiper>
+      </ThemeDiv>
     </>
   );
 };
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const ThemeDiv = styled.div`
+  height: 400px;
 `;
 
 export default Theme;
