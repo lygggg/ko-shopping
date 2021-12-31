@@ -19,15 +19,6 @@ const Product = ({ product }) => {
 const Img = styled.img`
   width: 35%;
   height: 80%;
-  @media screen and (max-width: 1060px) {
-    width: 70%;
-  }
-  @media screen and (max-width: 768px) {
-    width: 40%;
-  }
-  @media screen and (max-width: 548px) {
-    width: 20%;
-  }
 `;
 
 const DivFlex = styled.div``;

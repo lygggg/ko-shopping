@@ -22,12 +22,9 @@ const Home = () => {
 };
 
 const Div = styled.div`
-  box-sizing: border-box;
-  margin-top: 100px;
   width: 100%;
   height: 100%;
-  min-width: 1500px;
-  font-family: "woowa";
+  margin: 0 auto;
 `;
 
 export default Home;
