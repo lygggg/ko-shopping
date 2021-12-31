@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const ProductDetail = () => {
-  return <div>안녕ㅋ</div>;
+  const { productId } = useParams();
+  return <div>{productId + "해당 id출력"}</div>;
 };
 
 export default ProductDetail;
