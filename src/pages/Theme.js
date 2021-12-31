@@ -13,9 +13,9 @@ const Theme = () => {
   return (
     <>
       <Swiper navigation={true} className="mySwiper">
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>#겨울 방한템</SwiperSlide>
+        <SwiperSlide>#나를 위한 선물</SwiperSlide>
+        <SwiperSlide>#너를 위한 선물</SwiperSlide>
       </Swiper>
     </>
   );
