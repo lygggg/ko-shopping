@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
 const Product = ({ product }) => {
   return (
     <>
-      <DivGrid>
-        <Img src={product.thumbnail} />
-        <DivName>{product.name}</DivName>
-        <DivDes>{product.description}</DivDes>
-      </DivGrid>
+      <StyledLink to={`/products/${product.id}`}>
+        <DivGrid>
+          <Img src={product.thumbnail} />
+          <DivName>{product.name}</DivName>
+          <DivDes>{product.description}</DivDes>
+        </DivGrid>
+      </StyledLink>
     </>
   );
 };
@@ -32,6 +35,11 @@ const DivDes = styled.div`
 const DivGrid = styled.div`
   margin: 20px;
   margin-top: 40px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
 `;
 
 export default Product;

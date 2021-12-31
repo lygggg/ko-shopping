@@ -15,7 +15,7 @@ function App() {
       <InnerDiv>
         <Header />
         <Route exact path="/" component={Home} />
-        <Route path="/product" component={ProductDetail} />
+        <Route path="products/:productId/" component={ProductDetail} />
         <Route path="/basket" component={Basket} />
       </InnerDiv>
     </BrowserRouter>
