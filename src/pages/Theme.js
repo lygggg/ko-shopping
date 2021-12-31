@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +14,9 @@ const Theme = () => {
   return (
     <>
       <Swiper navigation={true} className="mySwiper">
-        <SwiperSlide>#겨울 방한템</SwiperSlide>
+        <SwiperSlide>
+          <Link to={`/themes/13/products`}>#겨울 방한템</Link>
+        </SwiperSlide>
         <SwiperSlide>#나를 위한 선물</SwiperSlide>
         <SwiperSlide>#너를 위한 선물</SwiperSlide>
       </Swiper>
