@@ -1,37 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-
 import axios from "axios";
-import Product from "./Product";
 
 import styled from "styled-components";
 
-const products = {
-  product: [
-    {
-      id: 13,
-      name: "기모 트레이닝복 상하",
-      description: "따듯한 트레이닝 복을 상하 세트로 만나보세요",
-      thumbnail:
-        "http://img.1300k.com/events/site/2021/11/211108_131283_pc_11_1118.jpg",
-      price: "10000원",
-    },
-  ],
-};
-
 const ProductDetail = () => {
+  const [product, setProduct] = useState([]);
   const { productId } = useParams();
-  const product = products.product[0];
 
-  //   const getProduct = async () => {
-  //     const { data } = await axios.get(
-  //       `${process.env.REACT_APP_PSTM_API}/products/${productId}`
-  //     );
-  //     console.log(data);
-  //     setProdcut(data.products);
-  //   };
+  const getProduct = async (id) => {
+    const { data } = await axios.get(
+      `${process.env.REACT_APP_PSTM_API}/products/${id}`
+    );
+    setProduct(data.products[0]);
+  };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getProduct(productId);
+  }, []);
+
   return (
     <>
       <div>

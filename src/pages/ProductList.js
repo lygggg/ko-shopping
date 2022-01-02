@@ -13,6 +13,7 @@ const ProductList = () => {
     const { data } = await axios.get(
       `${process.env.REACT_APP_PSTM_API}/products`
     );
+    console.log(data.products);
     setProductList(data.products);
   };
 
