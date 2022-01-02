@@ -8,7 +8,9 @@ const Header = () => {
     <>
       <HeaderDiv>
         <HeadDiv>
-          <NameDiv>토멘코 쇼핑</NameDiv>
+          <StyledLink to={`/`}>
+            <NameDiv>토멘코 쇼핑</NameDiv>
+          </StyledLink>
           <div>장바구니</div>
         </HeadDiv>
       </HeaderDiv>
@@ -34,6 +36,11 @@ const HeadDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #000000;
 `;
 
 export default Header;
