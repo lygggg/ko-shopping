@@ -14,8 +14,8 @@ const Review = ({ review }) => {
           />
         </div>
         <div>
-          <div>{review.userName}</div>
-          <div>{review.description}</div>
+          <NameDiv>{review.userName}</NameDiv>
+          <DescriptionDiv>{review.description}</DescriptionDiv>
         </div>
       </GridDiv>
     </>
@@ -24,11 +24,24 @@ const Review = ({ review }) => {
 
 const GridDiv = styled.div`
   display: grid;
+  grid-template-columns: 80px 200px;
+  grid-gap: 30px;
+  padding: 30px;
+  border: solid 0.2px #eaeaea;
+  margin-bottom: 30px;
+`;
+
+const NameDiv = styled.div`
+  font-size: 30px;
+`;
+
+const DescriptionDiv = styled.div`
+  font-size: 20px;
 `;
 
 const Img = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
 `;
 
 export default Review;
