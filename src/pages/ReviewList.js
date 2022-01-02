@@ -22,22 +22,22 @@ const ReviewList = () => {
   const reviewList = {
     reviews: [
       {
-        userid: "12312",
+        userId: "12312",
         userName: "손오공",
         description: "맛있네 추천",
       },
       {
-        userid: "312312",
+        userId: "312312",
         userName: "원빈",
         description: "맛없네 비추천",
       },
       {
-        userid: "41241232",
+        userId: "41241232",
         userName: "강호동",
         description: "따듯하네",
       },
       {
-        userid: "312321",
+        userId: "312321",
         userName: "박명수",
         description: "아 배고프다",
       },
@@ -46,9 +46,8 @@ const ReviewList = () => {
 
   return (
     <div>
-      {console.log(reviewList)}
-      {reviewList.map((review) => (
-        <div key={review.id}>
+      {reviewList.reviews.map((review) => (
+        <div key={review.userId}>
           <Review review={review} />
         </div>
       ))}

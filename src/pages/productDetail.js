@@ -7,20 +7,33 @@ import ReviewList from "./ReviewList";
 import styled from "styled-components";
 
 const ProductDetail = () => {
-  const [product, setProduct] = useState([]);
+  // const [product, setProduct] = useState([]);
   const [reviewMode, setReviewMode] = useState(false);
   const { productId } = useParams();
 
-  const getProduct = async (id) => {
-    const { data } = await axios.get(
-      `${process.env.REACT_APP_PSTM_API}/products/${id}`
-    );
-    setProduct(data.products[0]);
-  };
+  // const getProduct = async (id) => {
+  //   const { data } = await axios.get(
+  //     `${process.env.REACT_APP_PSTM_API}/products/${id}`
+  //   );
+  //   setProduct(data.products[0]);
+  // };
 
-  useEffect(() => {
-    getProduct(productId);
-  }, []);
+  // useEffect(() => {
+  //   getProduct(productId);
+  // }, []);
+
+  const products = {
+    products: [
+      {
+        id: 13,
+        name: "기모 트레이닝복 상하",
+        description: "따듯한 트레이닝 복을 상하 세트로 만나보세요",
+        thumbnail:
+          "http://img.1300k.com/events/site/2021/11/211108_131283_pc_11_1118.jpg",
+      },
+    ],
+  };
+  const product = products.products[0];
 
   return (
     <>
