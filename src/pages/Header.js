@@ -11,12 +11,22 @@ const Header = () => {
           <StyledLink to={`/`}>
             <NameDiv>토멘코 쇼핑</NameDiv>
           </StyledLink>
-          <div>장바구니</div>
+          <StyledLink to={`/basket`}>
+            <Img
+              src={
+                "https://cdn.pixabay.com/photo/2017/03/29/04/09/shopping-icon-2184065_960_720.png"
+              }
+            />
+          </StyledLink>
         </HeadDiv>
       </HeaderDiv>
     </>
   );
 };
+const Img = styled.img`
+  width: 70px;
+  height: 70px;
+`;
 const NameDiv = styled.div`
   font-size: 40px;
   font-weight: bold;
