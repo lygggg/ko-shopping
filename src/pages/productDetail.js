@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+import ReviewList from "./ReviewList";
+
 import styled from "styled-components";
 
 const ProductDetail = () => {
   const [product, setProduct] = useState([]);
+  const [reviewMode, setReviewMode] = useState(false);
   const { productId } = useParams();
 
   const getProduct = async (id) => {
@@ -27,10 +30,16 @@ const ProductDetail = () => {
         <PriceDiv>{product.price}</PriceDiv>
       </div>
       <MenuDiv>
-        <ButtonDiv>상품 설명</ButtonDiv>
-        <ButtonDiv>상품 후기</ButtonDiv>
+        <ButtonDiv onClick={() => setReviewMode(false)}>상품 설명</ButtonDiv>
+        <ButtonDiv onClick={() => setReviewMode(true)}>상품 후기</ButtonDiv>
       </MenuDiv>
-      <img src={product.thumbnail} />
+      <div>
+        {reviewMode === false ? (
+          <img src={product.thumbnail} />
+        ) : (
+          <ReviewList />
+        )}
+      </div>
     </>
   );
 };
