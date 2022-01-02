@@ -6,11 +6,6 @@ import styled from "styled-components";
 import Theme from "./Theme";
 import ProductList from "./ProductList";
 
-const getHome = async () => {
-  const { data } = await axios.get(`${process.env.REACT_APP_PSTM_API}/home`);
-  console.log(data.themes);
-};
-
 const Home = () => {
   return (
     <Div>
