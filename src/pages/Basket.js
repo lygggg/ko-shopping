@@ -4,7 +4,7 @@ const Basket = ({ product }) => {
   return (
     <>
       <div>
-        <img src={product.thumnail} />
+        <img src={product.thumbnail} />
         <div>{product.name}</div>
         <div>{product.price}</div>
       </div>

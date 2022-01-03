@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Basket from "./pages/Basket";
+import BasketList from "./pages/BasketList";
 import Product from "./pages/Product";
 import Header from "./pages/Header";
 import ProductDetail from "./pages/productDetail";
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Route exact path="/" component={Home} />
         <Route path="/products/:productId" component={ProductDetail}></Route>
-        <Route path="/basket" component={Basket} />
+        <Route path="/basket" component={BasketList} />
       </InnerDiv>
     </BrowserRouter>
   );
