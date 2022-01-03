@@ -35,9 +35,45 @@ const BasketList = () => {
           </div>
         ))}
       </MainDiv>
+      <GridDiv>
+        <InnerDiv>
+          <div>상품 금액({basketList.products.length}개)</div>
+          <div>500000원</div>
+        </InnerDiv>
+        <InnerDiv>
+          <div>배송비</div>
+          <div>2500원</div>
+        </InnerDiv>
+        <InnerDiv>
+          <div>총 주문금액</div>
+          <div>149000원</div>
+        </InnerDiv>
+      </GridDiv>
+      <OrderDiv>주문하기</OrderDiv>
     </>
   );
 };
+
+const OrderDiv = styled.div`
+  width: 100%;
+  height: 80px;
+  background: #86e57f;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+`;
+
+const InnerDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+`;
+const GridDiv = styled.div`
+  display: grid;
+  grid-template-rows: 30px 30px 30px;
+`;
 
 const TitleDiv = styled.div`
   text-align: center;
