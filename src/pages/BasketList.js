@@ -26,16 +26,25 @@ const BasketList = () => {
     ],
   };
   return (
-    <MainDiv>
-      {basketList.products.map((product) => (
-        <div key={product.id}>
-          <Basket product={product}></Basket>
-        </div>
-      ))}
-    </MainDiv>
+    <>
+      <MainDiv>
+        <TitleDiv>장바구니</TitleDiv>
+        {basketList.products.map((product) => (
+          <div key={product.id}>
+            <Basket product={product}></Basket>
+          </div>
+        ))}
+      </MainDiv>
+    </>
   );
 };
 
+const TitleDiv = styled.div`
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 40px;
+`;
 const MainDiv = styled.div`
   height: 100vh;
   display: flex;
