@@ -53,9 +53,20 @@ const ProductDetail = () => {
           <ReviewList />
         )}
       </div>
+      <OrderDiv>장바구니 담기</OrderDiv>
     </>
   );
 };
+
+const OrderDiv = styled.div`
+  width: 100%;
+  height: 80px;
+  background: #86e57f;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+`;
 
 const ButtonDiv = styled.div`
   display: flex;
