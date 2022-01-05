@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 
 import Review from "./Review";
-import reviewStore from "../stores/reviewStore";
+import { getReviews } from "../service/ReviewService";
 
 const ReviewList = () => {
   const [reviewList, setReviewList] = useState([]);
 
-  const getReviewList = () => {
-    const data = reviewStore.getReviews();
+  const fetchReviews = async () => {
+    const data = await getReviews();
     setReviewList(data);
   };
   useEffect(() => {
-    getReviewList();
+    fetchReviews();
   }, []);
 
   return (
