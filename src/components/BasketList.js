@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 import Basket from "./Basket";
-import basketStore from "../stores/basketStore";
+import { getBaskets } from "../service/BasketService";
 
 import styled from "styled-components";
 
 const BasketList = () => {
   const [basketList, setBasketList] = useState([]);
 
-  const getBaskets = () => {
-    const data = basketStore.getBaskets();
+  const fetchBaskets = async () => {
+    const data = await getBaskets();
     setBasketList(data);
   };
 
   useEffect(() => {
-    getBaskets();
+    fetchBaskets();
   }, []);
 
   return (
