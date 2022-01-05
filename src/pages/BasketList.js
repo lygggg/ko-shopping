@@ -1,35 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Basket from "./Basket";
+import basketStore from "../stores/basketStore";
 
 import styled from "styled-components";
 
 const BasketList = () => {
-  const basketList = {
-    products: [
-      {
-        id: 13,
-        name: "기모 트레이닝복 상하",
-        description: "따듯한 트레이닝 복을 상하 세트로 만나보세요",
-        thumbnail:
-          "https://cdn.pixabay.com/photo/2016/11/30/08/46/living-room-1872191_960_720.jpg",
-        price: 12000,
-      },
-      {
-        id: 12,
-        name: "부드러운 극세사머플러 목도리선물",
-        description: "여대생 방한템 부드러운 극세사머플러 목도리선물이에요",
-        thumbnail:
-          "https://cdn.pixabay.com/photo/2016/11/30/08/46/living-room-1872191_960_720.jpg",
-        price: 12000,
-      },
-    ],
+  const [basketList, setBasketList] = useState([]);
+
+  const getBaskets = () => {
+    const data = basketStore.getBaskets();
+    setBasketList(data);
   };
+
+  useEffect(() => {
+    getBaskets();
+  }, []);
+
   return (
     <>
       <MainDiv>
         <TitleDiv>장바구니</TitleDiv>
-        {basketList.products.map((product) => (
+        {basketList.map((product) => (
           <div key={product.id}>
             <Basket product={product}></Basket>
           </div>
@@ -37,7 +29,7 @@ const BasketList = () => {
       </MainDiv>
       <GridDiv>
         <InnerDiv>
-          <div>상품 금액({basketList.products.length}개)</div>
+          <div>상품 금액({basketList.length}개)</div>
           <div>500000원</div>
         </InnerDiv>
         <InnerDiv>
