@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import ReviewList from "./ReviewList";
-import productStore from "../stores/productStore";
+import { getProduct } from "../service/PrductService";
 
 import styled from "styled-components";
 
@@ -11,13 +11,13 @@ const ProductDetail = () => {
   const [reviewMode, setReviewMode] = useState(false);
   const { productId } = useParams();
 
-  const getProduct = (id) => {
-    const data = productStore.getProduct(id);
+  const fetchProduct = async (id) => {
+    const data = await getProduct(id);
     setProduct(data);
   };
 
   useEffect(() => {
-    getProduct(productId);
+    fetchProduct(productId);
   }, [productId]);
 
   return (

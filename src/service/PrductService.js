@@ -11,9 +11,9 @@ export const getProducts = async () => {
   }
 };
 
-export const getProduct = async () => {
+export const getProduct = async (id) => {
   try {
-    return await apiGetProduct();
+    return await apiGetProduct(id);
   } catch (e) {
     alert(e);
   }
