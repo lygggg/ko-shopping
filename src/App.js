@@ -1,11 +1,10 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import BasketList from "./pages/BasketList";
-import Product from "./pages/Product";
+import BasketList from "./components/BasketList";
 import Header from "./pages/Header";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetail from "./components/ProductDetail";
 
 import styled from "styled-components";
 

@@ -1,10 +1,9 @@
 import React from "react";
-import axios from "axios";
 
 import styled from "styled-components";
 
 import Theme from "./Theme";
-import ProductList from "./ProductList";
+import ProductList from "../components/ProductList";
 
 const Home = () => {
   return (

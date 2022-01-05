@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     getProduct(productId);
-  }, []);
+  }, [productId]);
 
   return (
     <>
@@ -33,6 +33,7 @@ const ProductDetail = () => {
       </MenuDiv>
       <div>
         {reviewMode === false ? (
+          // eslint-disable-next-line jsx-a11y/alt-text
           <img src={product.thumbnail} />
         ) : (
           <ReviewList />
