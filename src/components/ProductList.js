@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import productStore from "../stores/productStore";
+import { getProducts } from "../service/PrductService";
 
 import Product from "./Product";
 
@@ -8,13 +8,13 @@ import styled from "styled-components";
 const ProductList = () => {
   const [productList, setProductList] = useState([]);
 
-  const getProducts = () => {
-    const data = productStore.getProducts();
+  const fetchProducts = async () => {
+    const data = await getProducts();
     setProductList(data);
   };
 
   useEffect(() => {
-    getProducts();
+    fetchProducts();
   }, []);
 
   return (
