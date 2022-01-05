@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import BasketList from "./pages/BasketList";
 import Product from "./pages/Product";
 import Header from "./pages/Header";
-import ProductDetail from "./pages/productDetail";
+import ProductDetail from "./pages/ProductDetail";
 
 import styled from "styled-components";
 
