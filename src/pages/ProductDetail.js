@@ -45,6 +45,7 @@ const ProductDetail = () => {
 
 const Img = styled.img`
   width: 100%;
+  height: 500px;
 `;
 
 const OrderDiv = styled.div`
