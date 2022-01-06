@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import BasketList from "./components/BasketList";
-import Header from "./pages/Header";
-import ProductDetail from "./components/ProductDetail";
+import BasketList from "./pages/BasketList";
+import Header from "./components/Header";
+import ProductDetail from "./pages/ProductDetail";
 
 import styled from "styled-components";
 

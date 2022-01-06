@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-import ReviewList from "./ReviewList";
+import ReviewList from "../components/ReviewList";
 import { getProduct } from "../service/PrductService";
 
 import styled from "styled-components";

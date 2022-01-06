@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Basket from "./Basket";
+import Basket from "../components/Basket";
 import { getBaskets } from "../service/BasketService";
 
 import styled from "styled-components";

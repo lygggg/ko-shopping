@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import Theme from "./Theme";
+import Theme from "../components/Theme";
 import ProductList from "../components/ProductList";
 
 const Home = () => {
