@@ -16,8 +16,8 @@ const ReviewList = () => {
 
   return (
     <div>
-      {reviewList.map((review) => (
-        <div key={review.userId}>
+      {reviewList.map((review, index) => (
+        <div key={index}>
           <Review review={review} />
         </div>
       ))}
