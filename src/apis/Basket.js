@@ -1,6 +1,6 @@
-import basketStore from "../stores/basketStore";
+import productStore from "../stores/productStore";
 
-export const getBaskets = () => {
-  const data = basketStore.getBaskets();
+export const getBaskets = (ids) => {
+  const data = productStore.getBaskets(ids);
   return data;
 };

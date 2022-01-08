@@ -16,6 +16,13 @@ const ProductDetail = () => {
     setProduct(data);
   };
 
+  const putBasket = (id) => {
+    const baskets = JSON.parse(localStorage.getItem("basket"));
+    baskets === null
+      ? localStorage.setItem("basket", JSON.stringify([id]))
+      : localStorage.setItem("basket", JSON.stringify([...baskets, id]));
+  };
+
   useEffect(() => {
     fetchProduct(productId);
   }, [productId]);
@@ -39,7 +46,7 @@ const ProductDetail = () => {
           <ReviewList />
         )}
       </div>
-      <OrderDiv>장바구니 담기</OrderDiv>
+      <OrderDiv onClick={() => putBasket(product.id)}>장바구니 담기</OrderDiv>
     </>
   );
 };
@@ -49,7 +56,7 @@ const Img = styled.img`
   height: 500px;
 `;
 
-const OrderDiv = styled.div`
+const OrderDiv = styled.button`
   width: 100%;
   height: 80px;
   background: #86e57f;
@@ -59,7 +66,7 @@ const OrderDiv = styled.div`
   line-height: 80px;
 `;
 
-const ButtonDiv = styled.div`
+const ButtonDiv = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;

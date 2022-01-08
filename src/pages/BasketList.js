@@ -9,7 +9,8 @@ const BasketList = () => {
   const [basketList, setBasketList] = useState([]);
 
   const fetchBaskets = async () => {
-    const data = await getBaskets();
+    const localData = new Set(JSON.parse(localStorage.getItem("basket")));
+    const data = await getBaskets(Array.from(localData));
     setBasketList(data);
   };
 

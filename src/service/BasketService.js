@@ -1,8 +1,8 @@
 import { getBaskets as apiGetBaskets } from "../apis/Basket.js";
 
-export const getBaskets = async () => {
+export const getBaskets = async (ids) => {
   try {
-    return await apiGetBaskets();
+    return await apiGetBaskets(ids);
   } catch (e) {
     alert(e);
   }
