@@ -86,8 +86,9 @@ const productStore = {
   },
 
   getProduct(id) {
-    return this.products.find((product) => product.id === id);
+    return this.products.find((product) => product.id === parseInt(id));
   },
+
   getBaskets(ids) {
     const baskets = [];
     for (let i = 0; i < ids.length; i++) {

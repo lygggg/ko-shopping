@@ -75,7 +75,7 @@ const TitleDiv = styled.div`
   margin: 40px;
 `;
 const MainDiv = styled.div`
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; /*수직 정렬*/
