@@ -41,7 +41,7 @@ const ProductDetail = () => {
       <div>
         {reviewMode === false ? (
           // eslint-disable-next-line jsx-a11y/alt-text
-          <img src={product.thumbnail} />
+          <DetailImg src={product.thumbnail} />
         ) : (
           <ReviewList />
         )}
@@ -50,6 +50,11 @@ const ProductDetail = () => {
     </>
   );
 };
+
+const DetailImg = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 const Img = styled.img`
   width: 100%;
