@@ -31,9 +31,8 @@ const ProductList = () => {
 };
 
 const ListDiv = styled.div`
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 30% 30% 30%;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   grid-row-gap: 30px;
   border: 1px solid #eaeaea;

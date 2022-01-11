@@ -35,6 +35,7 @@ const DivDes = styled.div`
 const DivGrid = styled.div`
   margin: 20px;
   margin-top: 40px;
+  width: 300px;
 `;
 
 const StyledLink = styled(Link)`
