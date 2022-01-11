@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://lygggg.github.io/ko-shopping/static/css/main.fed8d8a7.css",
-    "main.js": "https://lygggg.github.io/ko-shopping/static/js/main.c37bfe1b.js",
+    "main.js": "https://lygggg.github.io/ko-shopping/static/js/main.152f9c26.js",
     "static/media/BMHANNAAir_ttf.ttf": "https://lygggg.github.io/ko-shopping/static/media/BMHANNAAir_ttf.d0c38d74f11fd837be79.ttf",
     "index.html": "https://lygggg.github.io/ko-shopping/index.html",
     "main.fed8d8a7.css.map": "https://lygggg.github.io/ko-shopping/static/css/main.fed8d8a7.css.map",
-    "main.c37bfe1b.js.map": "https://lygggg.github.io/ko-shopping/static/js/main.c37bfe1b.js.map"
+    "main.152f9c26.js.map": "https://lygggg.github.io/ko-shopping/static/js/main.152f9c26.js.map"
   },
   "entrypoints": [
     "static/css/main.fed8d8a7.css",
-    "static/js/main.c37bfe1b.js"
+    "static/js/main.152f9c26.js"
   ]
 }
